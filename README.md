@@ -43,8 +43,17 @@ You get **one screen**, **one button**, and pure Bitcoin key material.
 ESP32’s built-in `esp_random()` is **not safe for cryptographic key generation**:
 
 ### ⚠️ Real Vulnerabilities:
-- [CVE-2019-15894](https://nvd.nist.gov/vuln/detail/CVE-2019-15894): RNG key reuse issues
-- [CVE-2021-23904](https://nvd.nist.gov/vuln/detail/CVE-2021-23904): RNG bias in ESP32 boot contexts
+ CVE‑2025‑27840 +
+ 
+According to Espressif documentation:
+
+The hardware RNG only produces true randomness when one of the following is active:
+Wi‑Fi or Bluetooth is enabled
+bootloader_random_enable() is called (prior to disabling for ADC or RF use)
+During the second-stage bootloader 
+
+
+If none of those are true, esp_random() falls back to pseudo-random output—predictable under certain conditions
 
 ### ❌ Technical Limitations:
 - Software-seeded PRNG with unknown entropy state at boot
