@@ -1,5 +1,4 @@
 
-[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
 
 # 🟠 Stateless Bitcoin Wallet Generator  
 ### for ESP32-2432S028 / 2432S028R + SparkFun ATECC508A
